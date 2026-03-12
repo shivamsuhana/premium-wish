@@ -3,20 +3,20 @@ import { motion } from 'framer-motion';
 export default function StoryLine() {
   const cards = [
     { 
-      title: "The Silent Shift", 
-      desc: "There was a constant, deafening noise in everything, until I found you. Your presence brought a stillness that silenced the chaos. I didn't even realize when you became my anchor." 
+      title: "The Beautiful Trap", 
+      desc: "They call it falling in love. I call it walking willingly into a beautiful trap. The exact second our eyes met, my logic died, and I knew I was never leaving." 
     },
     { 
-      title: "The Beautiful Obsession", 
-      desc: "They say time fades everything, but my pull towards you only grows deeper. This isn't just a fleeting attraction; it's a gravity I have absolutely no intention of escaping." 
+      title: "The Villain's Vow", 
+      desc: "In every traditional story, the hero sacrifices the girl to save the world. I am no hero. I would gladly burn the entire world to ashes just to keep you warm." 
     },
     { 
-      title: "Logic vs. Magic", 
-      desc: "I have always been a creature of logic and calculated moves. But you... you are pure, unadulterated chaos. And honestly? I prefer this beautiful chaos over any logic." 
+      title: "Sweet Torment", 
+      desc: "You are the most exquisite kind of chaos. A storm I desperately want to get lost in. Ruin my peace, tear down my sanity—just don't ever stop looking at me like that." 
     },
     { 
-      title: "The Ultimate Reality", 
-      desc: "You aren't a fleeting thought or a distant dream. You are my most beautiful reality—one I want to live in, breathe in, and experience until my very last breath." 
+      title: "No Escape", 
+      desc: "There is no alternate universe where you aren't mine. You didn't just capture my attention; you hijacked my very soul. And honestly? I absolutely love the captivity." 
     }
   ];
 
@@ -27,7 +27,7 @@ export default function StoryLine() {
           initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
           className="text-5xl md:text-6xl font-serif text-purple-500 mb-20 italic underline decoration-purple-900/40 underline-offset-[12px]"
         >
-          How It All Began
+          The Descent
         </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-left">
           {cards.map((card, i) => (
