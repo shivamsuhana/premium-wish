@@ -67,11 +67,11 @@ export default function Hero3D() {
           <div className="relative flex items-center justify-center w-full py-4">
             {/* Background word */}
             <h1 className="absolute text-7xl md:text-[14rem] font-serif text-white/5 select-none z-0 tracking-[0.1em] whitespace-nowrap">
-              OBSESSION
+              PRINCESS
             </h1>
             {/* Foreground word */}
             <h2 className="relative text-7xl md:text-[10rem] font-serif text-white drop-shadow-2xl leading-none z-10">
-              RUIN
+              QUEEN
             </h2>
           </div>
           
