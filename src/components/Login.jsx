@@ -123,7 +123,7 @@ export default function Login({ onUnlock }) {
                 className="w-full bg-rose-600 hover:bg-rose-500 py-4 rounded-2xl text-white font-bold uppercase text-xs tracking-[0.2em] shadow-xl shadow-rose-900/20 transition-all flex items-center justify-center gap-3"
                 aria-label="Unlock the magic"
               >
-                {isHovered ? "Ready Sejal?" : "Unlock the Magic"}
+                {isHovered ? "Ready baiby?" : "Unlock the Magic"}
                 <ShieldCheck size={16} />
               </motion.button>
             </form>
