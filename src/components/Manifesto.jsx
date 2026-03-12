@@ -46,7 +46,7 @@ export default function Manifesto() {
           whileInView={{ opacity: 1 }}
           transition={{ staggerChildren: 0.2, delayChildren: 0.3 }}
         >
-          {/* Left Border Accent */}
+          {/* Left Border k lye */}
           <motion.div 
             initial={{ scaleY: 0 }}
             whileInView={{ scaleY: 1 }}
@@ -84,7 +84,7 @@ export default function Manifesto() {
                 </motion.p>
               </div>
 
-              {/* Hover underline */}
+              {/* Hover underline ke liye  */}
               <motion.div 
                 initial={{ scaleX: 0 }}
                 whileHover={{ scaleX: 1 }}

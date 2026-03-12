@@ -9,7 +9,6 @@ export default function Hero3D() {
   return (
     <div className="h-screen w-full relative bg-[#050505] overflow-hidden">
       
-      {/* 3D SCENE */}
       <div className="absolute inset-0 z-0">
         <Canvas 
           camera={{ position: [0, 0, 5] }} 
@@ -45,7 +44,6 @@ export default function Hero3D() {
         </Canvas>
       </div>
 
-      {/* TEXT OVERLAY */}
       <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none z-10">
         <motion.div 
           initial={{ opacity: 0, scale: 0.8 }} 

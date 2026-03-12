@@ -52,7 +52,6 @@ export default function StoryLine() {
 
   return (
     <section className="py-32 px-6 bg-gradient-to-b from-zinc-950 to-[#080808] relative overflow-hidden">
-      {/* Background Elements */}
       <div className="absolute top-20 right-0 w-96 h-96 bg-rose-900/10 blur-[180px] rounded-full -z-10" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-rose-600/5 blur-[180px] rounded-full -z-10" />
 
@@ -94,7 +93,7 @@ export default function StoryLine() {
               onClick={() => setExpandedCard(expandedCard === i ? null : i)}
               className="p-8 md:p-10 rounded-2xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 backdrop-blur-md transition-all cursor-pointer group overflow-hidden relative"
             >
-              {/* Gradient background on hover */}
+              {/* Gradient background hover */}
               <div className={`absolute inset-0 bg-gradient-to-br ${card.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300 -z-10`} />
 
               <div className="relative z-10">
@@ -139,7 +138,7 @@ export default function StoryLine() {
           ))}
         </motion.div>
 
-        {/* Decorative Line */}
+        {/* Line */}
         <motion.div 
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}

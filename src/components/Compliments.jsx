@@ -23,7 +23,7 @@ export default function Compliments({ onNextPage }) {
 
   return (
     <section className="py-32 bg-gradient-to-b from-[#050505] via-[#080808] to-[#0a0a0a] border-t border-white/5 flex flex-col items-center relative overflow-hidden">
-      {/* Background glow */}
+      {/* Background glow karne ka liye */}
       <div className="absolute top-1/2 -left-40 w-80 h-80 bg-rose-600/10 blur-[120px] rounded-full -z-10" />
       <div className="absolute bottom-1/2 -right-40 w-80 h-80 bg-rose-900/10 blur-[120px] rounded-full -z-10" />
 
@@ -53,7 +53,6 @@ export default function Compliments({ onNextPage }) {
           </h2>
         </motion.div>
 
-        {/* Tags Section */}
         <motion.div 
           className="flex flex-wrap justify-center gap-3 md:gap-4"
           variants={containerVariants}
@@ -82,7 +81,6 @@ export default function Compliments({ onNextPage }) {
           ))}
         </motion.div>
 
-        {/* Stats */}
         <motion.div 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -104,7 +102,7 @@ export default function Compliments({ onNextPage }) {
         </motion.div>
       </div>
       
-      {/* Button Section */}
+      {/* Button */}
       <motion.button
         whileHover={{ scale: 1.08, boxShadow: "0px 0px 30px rgba(225, 29, 72, 0.5)" }}
         whileTap={{ scale: 0.95 }}

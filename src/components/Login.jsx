@@ -32,7 +32,6 @@ export default function Login({ onUnlock }) {
       role="dialog"
       aria-label="Login to access private content"
     >
-      {/* Animated Glow Background */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-rose-600/10 blur-[150px] rounded-full animate-pulse" />
       
       <motion.div 

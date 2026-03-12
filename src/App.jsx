@@ -53,25 +53,7 @@ function App() {
               </div>
             )}
 
-            {/* Floating Navigation */}
-            {currentPage === 'home' && (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 2 }}
-                className="fixed bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-3 backdrop-blur-md bg-black/20 px-6 py-3 rounded-full border border-white/10"
-              >
-                <a
-                  href="#home"
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  className="text-xs uppercase tracking-wider text-zinc-400 hover:text-rose-400 transition-colors"
-                >
-                  Top
-                </a>
-                <div className="w-px bg-white/10" />
-                <span className="text-xs text-zinc-500">Scroll to explore</span>
-              </motion.div>
-            )}
+
           </motion.div>
         )}
       </AnimatePresence>

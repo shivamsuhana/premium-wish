@@ -3,8 +3,8 @@ import { Crown, Sparkles } from 'lucide-react';
 
 export default function GrandWish() {
   return (
-    <section className="h-screen flex items-center justify-center bg-gradient-to-b from-[#000000] via-[#050505] to-[#030303] relative overflow-hidden">
-      {/* Animated background elements */}
+    <section className="min-h-[65vh] py-20 flex items-center justify-center bg-gradient-to-b from-[#000000] via-[#050505] to-[#030303] relative overflow-hidden">
+      {/* Animated background elmnts */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-rose-950/30 blur-[180px] rounded-full animate-pulse" />
       <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-rose-900/20 blur-[120px] rounded-full" />
       
@@ -63,7 +63,6 @@ export default function GrandWish() {
           </div>
         </motion.div>
         
-        {/* Decorative elements */}
         <motion.div 
           initial={{ scaleY: 0 }}
           animate={{ scaleY: 1 }}
@@ -71,7 +70,6 @@ export default function GrandWish() {
           className="mt-24 h-40 w-[1px] bg-gradient-to-b from-rose-700 via-rose-900 to-transparent mx-auto opacity-60 origin-top"
         />
 
-        {/* Sparkles */}
         <motion.div 
           className="flex justify-center gap-4 mt-8"
           initial={{ opacity: 0 }}

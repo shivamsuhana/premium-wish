@@ -46,7 +46,7 @@ export default function SpecialPage() {
   return (
     <div className="min-h-screen bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-rose-950/20 via-[#030303] to-[#000000] py-24 px-4 relative overflow-hidden flex flex-col items-center">
       
-      {/* Background Elements */}
+      {/*  pichhe wale lements */}
       <div className="absolute top-1/4 -right-64 w-96 h-96 bg-rose-900/20 blur-[150px] rounded-full -z-10" />
       <div className="absolute bottom-1/4 -left-64 w-96 h-96 bg-rose-600/10 blur-[150px] rounded-full -z-10" />
 
@@ -66,7 +66,7 @@ export default function SpecialPage() {
         <p className="text-zinc-500 text-sm md:text-base tracking-[0.2em] uppercase">Unfiltered thoughts</p>
       </motion.div>
 
-      {/* Cards Grid */}
+      {/* Cards sectn */}
       <motion.div 
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl w-full mb-24 z-10"
         variants={containerVariants}
@@ -82,7 +82,7 @@ export default function SpecialPage() {
             className="p-8 rounded-3xl bg-zinc-950/60 border border-white/5 backdrop-blur-xl shadow-2xl flex flex-col items-center justify-between text-center transition-all duration-300 group relative overflow-hidden cursor-pointer"
             onClick={() => toggleLike(i)}
           >
-            {/* Gradient overlay */}
+            {/* Gradient ovverlayyyy */}
             <div className="absolute inset-0 bg-gradient-to-br from-rose-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
 
             <div className="relative z-10 flex flex-col h-full justify-between gap-4">
@@ -125,7 +125,6 @@ export default function SpecialPage() {
         ))}
       </motion.div>
 
-      {/* Main Button */}
       <motion.button
         whileHover={{ scale: 1.08, boxShadow: "0px 0px 50px rgba(225, 29, 72, 0.6)" }}
         whileTap={{ scale: 0.95 }}
@@ -139,7 +138,6 @@ export default function SpecialPage() {
         <span className="relative z-10">Unseal The Vow</span>
       </motion.button>
 
-      {/* Modal Popup */}
       <AnimatePresence>
         {showPopup && (
           <motion.div 
@@ -157,7 +155,6 @@ export default function SpecialPage() {
               className="bg-gradient-to-b from-[#0a0a0a] to-[#050505] p-10 md:p-16 rounded-3xl border border-rose-600/30 max-w-3xl w-full relative shadow-[0_0_150px_rgba(225,29,72,0.25)] my-auto"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Close Button */}
               <motion.button 
                 whileHover={{ scale: 1.2, rotate: 90 }}
                 whileTap={{ scale: 0.9 }}
@@ -168,7 +165,6 @@ export default function SpecialPage() {
                 <X size={32} />
               </motion.button>
               
-              {/* Modal Content */}
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -193,7 +189,6 @@ export default function SpecialPage() {
                 />
               </motion.div>
               
-              {/* Body Text */}
               <motion.div 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -211,7 +206,7 @@ export default function SpecialPage() {
                 </p>
               </motion.div>
               
-              {/* Signature */}
+              {/* signature last me kra h */}
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
