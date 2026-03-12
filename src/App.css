@@ -1,42 +1,123 @@
+/* App-specific styles and animations */
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Hero Section Styles */
+.hero-gradient {
+  background: linear-gradient(180deg, rgba(5, 5, 5, 0) 0%, rgba(225, 29, 72, 0.1) 50%, rgba(5, 5, 5, 1) 100%);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Card Hover Effects */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(225, 29, 72, 0.2);
+}
+
+/* Button Effects */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+/* Text Shadow Effects */
+.text-shadow-lg {
+  text-shadow: 0 0 30px rgba(225, 29, 72, 0.5),
+              0 0 20px rgba(225, 29, 72, 0.3);
+}
+
+.text-shadow-md {
+  text-shadow: 0 0 15px rgba(225, 29, 72, 0.3);
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, #e11d48 0%, #fb7185 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Border Animations */
+.border-animate {
+  position: relative;
+  background-image: linear-gradient(90deg, transparent 0%, transparent calc(100% - 2px), #e11d48 100%),
+                    linear-gradient(180deg, transparent 0%, transparent calc(100% - 2px), #e11d48 100%),
+                    linear-gradient(270deg, transparent 0%, transparent calc(100% - 2px), #e11d48 100%),
+                    linear-gradient(0deg, transparent 0%, transparent calc(100% - 2px), #e11d48 100%);
+  background-size: 100% 2px, 2px 100%, 100% 2px, 2px 100%;
+  background-position: 0 0, 100% 0, 0 100%, 0 0;
+  background-repeat: no-repeat;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Loading animations */
+@keyframes loading {
+  0% {
+    opacity: 0.6;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+.loading {
+  animation: loading 1.5s ease-in-out infinite;
+}
+
+/* Responsive Design Enhancements */
+@media (max-width: 768px) {
+  :root {
+    font-size: 14px;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px);
   }
 }
 
-.card {
-  padding: 2em;
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
-.read-the-docs {
-  color: #888;
+/* Print Styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
 }
