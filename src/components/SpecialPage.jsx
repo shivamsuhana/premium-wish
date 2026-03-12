@@ -171,16 +171,23 @@ export default function SpecialPage() {
                 transition={{ delay: 0.2 }}
                 className="text-center mb-12"
               >
-                <h1 className="text-5xl md:text-7xl font-serif text-white mb-4 leading-tight">
-                  CARNAL <br/> 
-                  <motion.span 
+                <h1 className="text-center space-y-2">
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 }}
+                    className="text-2xl md:text-4xl font-serif text-white/70 italic"
+                  >
+                    Eternal Craving
+                  </motion.div>
+                  <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.4 }}
-                    className="text-rose-600 drop-shadow-[0_0_12px_rgba(225,29,72,0.4)] mt-3 block text-6xl md:text-8xl font-bold"
+                    className="text-6xl md:text-8xl font-serif text-rose-600 drop-shadow-[0_0_20px_rgba(225,29,72,0.5)]"
                   >
                     OBSESSION
-                  </motion.span>
+                  </motion.div>
                 </h1>
                 <motion.div 
                   animate={{ scaleX: [0, 1, 0] }}
