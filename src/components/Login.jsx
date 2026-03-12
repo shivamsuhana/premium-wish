@@ -9,7 +9,7 @@ export default function Login({ onUnlock }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (password.toLowerCase() === 'sejal') {
+    if (password.toLowerCase() === 'krishu') {
       onUnlock();
     } else {
       setError(true);

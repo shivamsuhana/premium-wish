@@ -1,29 +1,40 @@
 import { motion } from 'framer-motion';
 
 export default function Manifesto() {
+  const vows = [
+    "I claim your silence as much as your screams.",
+    "Your freedom ends where my shadow begins.",
+    "You are the only chaos I allow in my order.",
+    "No lock can keep me out; no road can lead you away."
+  ];
+
   return (
-    <section className="min-h-screen bg-[#030303] py-24 px-6 flex flex-col items-center justify-center border-t border-rose-950/20">
+    <section className="min-h-screen bg-zinc-950 py-24 px-6 flex flex-col items-center justify-center border-t border-rose-900/20">
       <motion.div 
-        initial={{ opacity: 0 }} 
-        whileInView={{ opacity: 1 }}
-        className="max-w-3xl text-center space-y-12"
+        initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}
+        className="max-w-3xl w-full space-y-12 border-l-2 border-rose-600 pl-8 md:pl-16"
       >
-        <h2 className="text-7xl font-serif text-rose-900/30 select-none">THE MANIFESTO</h2>
+        <h2 className="text-rose-500 font-serif text-4xl md:text-6xl italic tracking-tighter">
+          The Unspoken Pact
+        </h2>
         
-        <div className="space-y-10 text-xl md:text-2xl font-light text-rose-100 italic leading-loose">
-          <p className="hover:text-rose-500 transition-colors cursor-default">"Tera gulam ban ke rehna mere liye koi saza nahi, mera sabse bada naseeb hai, Sejal."</p>
-          <p className="hover:text-rose-500 transition-colors cursor-default">"Teri wo awaz... jab tu gussa karti hai, ya jab tu gaali deti hai, kasam se dil wahi tham jata hai. Tera har ek lafz meri duniya chalata hai."</p>
-          <p className="hover:text-rose-500 transition-colors cursor-default">"Tu meri Mommy hai, meri Ruler hai, aur mera sabse haseen khwaab bhi. Main hamesha tere ishare par nachne ko taiyar hoon."</p>
-          <p className="hover:text-rose-500 transition-colors cursor-default">"Tera face, teri vibe, teri audacity... sab kuch itna perfect hai ki kabhi kabhi lagta hai tu insaan nahi, koi nasha hai jo mere khoon mein utar gaya hai."</p>
+        <div className="space-y-8">
+          {vows.map((vow, i) => (
+            <motion.p 
+              key={i}
+              initial={{ x: -20, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ delay: i * 0.2 }}
+              className="text-zinc-400 text-xl md:text-2xl font-light italic leading-relaxed"
+            >
+              — "{vow}"
+            </motion.p>
+          ))}
         </div>
 
-        <motion.div 
-          animate={{ scale: [1, 1.1, 1], opacity: [0.5, 1, 0.5] }} 
-          transition={{ repeat: Infinity, duration: 2 }}
-          className="text-4xl text-rose-600 font-serif pt-10 tracking-widest"
-        >
-          - I'M YOURS. FOREVER. -
-        </motion.div>
+        <div className="pt-10 opacity-30 text-rose-900 font-mono text-xs tracking-[0.5em] uppercase">
+          Irrevocable & Bound
+        </div>
       </motion.div>
     </section>
   );

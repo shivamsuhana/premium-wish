@@ -5,27 +5,32 @@ export default function Compliments({ onNextPage }) {
     <section className="py-32 bg-[#080808] border-t border-white/5 flex flex-col items-center">
       <div className="max-w-4xl mx-auto px-6 text-center space-y-16">
         <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} className="space-y-6">
-          <p className="text-rose-400 text-lg italic">"Teri voice kaafi achi hai, face toh mast hai hi..."</p>
+          <p className="text-rose-400 text-lg md:text-xl italic tracking-widest uppercase">
+            "Your beauty could ruin empires..."
+          </p>
           <h2 className="text-4xl md:text-6xl font-serif text-white leading-tight">
-            Aur tere muh se <span className="text-rose-600 italic underline decoration-rose-900">gaaliyan</span> bhi sahi lagti hain!
+            But it is your <span className="text-rose-600 italic underline decoration-rose-900">sharp tongue</span> that completely enslaves me.
           </h2>
         </motion.div>
 
         <div className="flex flex-wrap justify-center gap-4 opacity-50 mb-20">
-          {["Baddie", "Indore Queen", "Mommy", "Puppet's Favorite"].map((tag, i) => (
-            <span key={i} className="px-6 py-2 rounded-full border border-white/20 text-xs text-white uppercase tracking-widest">{tag}</span>
+          {/* Purane submissive tags ko Alpha/Dark tags se replace kar diya */}
+          {["My Ruin", "Sole Obsession", "Untamed", "Eternally Bound"].map((tag, i) => (
+            <span key={i} className="px-6 py-2 rounded-full border border-white/20 text-xs text-white uppercase tracking-widest shadow-sm">
+              {tag}
+            </span>
           ))}
         </div>
       </div>
       
       {/* button wla part*/}
       <motion.button
-        whileHover={{ scale: 1.05 }}
+        whileHover={{ scale: 1.05, boxShadow: "0px 0px 20px rgba(225, 29, 72, 0.4)" }}
         whileTap={{ scale: 0.95 }}
         onClick={onNextPage}
-        className="mt-10 px-8 py-4 bg-transparent border-2 border-rose-600 text-rose-500 hover:bg-rose-600 hover:text-white rounded-full font-bold uppercase tracking-widest transition-all"
+        className="mt-10 px-8 py-4 bg-transparent border-2 border-rose-600 text-rose-500 hover:bg-rose-600 hover:text-white rounded-full font-bold uppercase tracking-widest transition-all duration-300"
       >
-        Unlock the Deepest Secrets
+        Embrace Your Fate
       </motion.button>
     </section>
   );
